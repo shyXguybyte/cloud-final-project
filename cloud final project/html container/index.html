@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ping"  href="/templates/media/ImageHandler.png">
+
+    <title>cloud_project</title>
+    <style>
+        h1{
+            color: rgb(252, 250, 250);
+            text-align: center;
+            font-style: italic;
+
+        }
+        body{
+            background-color: rgb(6, 6, 6);
+            text-align: center;
+            font-style: italic;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        table{
+            text-align: center;
+            color: white;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            border: 5px  white;
+        }
+    td{
+        border: 2px solid white;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <img src="/templates/media/ImageHandler.png" alt="logo">
+    
+    <h1>Data from database </h1>
+    
+    <table >
+        
+        <thead>
+            <tr>
+                
+                <td>ID</td>    
+                <td>FIRST_NAME</td>    
+                <td>SECOND_NAME</td>    
+                <td>CGPA</td>    
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                
+            </tr>
+            {% endfor %}
+            
+        </tbody>
+        
+    </table>
+
+    </body>
+    </html>

@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    build: ./database container
+    ports:
+      - "3306:3306"  # Map container port 3307 to host port 3306
+  web:
+    build: ./html container
+    ports:
+      - "80:80"  # Map container port 80 to host port 80
+    depends_on:
+      - db
